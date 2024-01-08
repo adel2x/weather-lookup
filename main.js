@@ -78,13 +78,13 @@ function showToday(result){
         var randomIndex = Math.floor(Math.random() * summerBgs.length);
         var randomSummerBg = summerBgs[randomIndex];
         // var newBackgroundImage = `url(./Images/${randomSummerBg}.png)`;
-        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(../Assignment5/Images/${randomSummerBg}.jpg)`;
+        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(/master/Images/${randomSummerBg}.jpg)`;
     }
     else{
         var randomIndex = Math.floor(Math.random() * winterBgs.length);
         var randomWinterBg = winterBgs[randomIndex];
         // var newBackgroundImage = `url(./Images/${randomWinterBg}.png)`;
-        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(../Assignment5/Images/${randomWinterBg}.jpg)`;
+        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(/master/Images/${randomWinterBg}.jpg)`;
     }
     currentDay.innerHTML= printDay;
     currentDate.innerHTML = d_Now;
