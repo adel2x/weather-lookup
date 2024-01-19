@@ -78,19 +78,19 @@ function showToday(result){
         var randomIndex = Math.floor(Math.random() * summerBgs.length);
         var randomSummerBg = summerBgs[randomIndex];
         // var newBackgroundImage = `url(./Images/${randomSummerBg}.png)`;
-        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(/master/Images/${randomSummerBg}.jpg)`;
+        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(images/${randomSummerBg}.jpg)`;
     }
     else{
         var randomIndex = Math.floor(Math.random() * winterBgs.length);
         var randomWinterBg = winterBgs[randomIndex];
         // var newBackgroundImage = `url(./Images/${randomWinterBg}.png)`;
-        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(/master/Images/${randomWinterBg}.jpg)`;
+        mainApp.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(images/${randomWinterBg}.jpg)`;
     }
     currentDay.innerHTML= printDay;
     currentDate.innerHTML = d_Now;
     currentDegree.innerHTML = result.current.temp_c + "&deg;C";
     nameOfCity.innerHTML = result.location.name;
-    currentIconCondition.innerHTML = `http:${result.current.condition.icon}`;
+    currentIconCondition.innerHTML = `https:${result.current.condition.icon}`;
     currentTextCondition.innerHTML =  result.current.condition.text;
     precipIN.innerHTML = result.current.humidity;
     windKPH.innerHTML = result.current.wind_kph;
@@ -119,7 +119,7 @@ function show2Days(result){
                 class="degreeWithImg d-flex h-150px flex-column-reverse justify-content-center align-items-center">
                 <p class="overmorrowMinDeg text-secondary fs-6 m-0">${result.forecast.forecastday[i].day.mintemp_c}&deg;C</p>
                 <p class="overmorrowMaxDeg text-white fs-4 m-0">${result.forecast.forecastday[i].day.maxtemp_c}&deg;C</p>
-                <img class="w-50px m-0 m-0 overmorrowCondition-icon" src="http:${result.forecast.forecastday[i].day.condition.icon}"
+                <img class="w-50px m-0 m-0 overmorrowCondition-icon" src="https:${result.forecast.forecastday[i].day.condition.icon}"
                     alt="cloud">
             </div>
             <p class="degreeDes text-center mt-4 overmorrowCondition-text">${result.forecast.forecastday[i].day.condition.text}</p>
